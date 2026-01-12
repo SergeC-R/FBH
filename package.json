@@ -1,0 +1,17 @@
+{
+  "name": "fasage-lux-landing",
+  "version": "1.0.0",
+  "description": "Landing page for Fasage Lux - Handcrafted Organic Beauty & Health",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080 -o",
+    "dev": "npx http-server -p 8080 -o"
+  },
+  "keywords": [
+    "landing-page",
+    "beauty",
+    "health"
+  ],
+  "author": "",
+  "license": "MIT"
+}

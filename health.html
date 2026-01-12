@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Weight Management - Fasage Beverly Hills</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration: none; color: inherit;"><h1>Fasage Beverly Hills</h1></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-icon-btn" onclick="toggleCart()" aria-label="Shopping Cart">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Category Hero Section -->
+    <section class="category-hero">
+        <div class="category-hero-image">
+            <video src="../../Pictures/FBH/weight loss red.mov" preload="metadata" muted autoplay loop playsinline>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="category-hero-content">
+            <h1 class="category-hero-title">Health & Weight Management</h1>
+            <p class="category-hero-subtitle">Professional weight loss treatments with personalized consultation services</p>
+        </div>
+        <div class="category-hero-overlay"></div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="category-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Health Solutions</h2>
+                <p>Transform your health journey with expert guidance and professional treatments</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Slim Fit Juice -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <video src="../../Pictures/FBH/Video Library _ Wix.com_files/Slimfit Juice.mp4" preload="metadata" muted onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime=0;">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="product-info">
+                        <h3>Slim Fit Juice</h3>
+                        <p class="product-description">Natural supplements designed to support healthy metabolism and energy levels, complementing your weight management journey. Beautifying and detox for a radiant complexion. Treat chronic constipation and gas for improved digestive health.</p>
+                        <ul class="product-features">
+                            <li>Natural ingredients</li>
+                            <li>Beautifying and detox</li>
+                            <li>Treats chronic constipation</li>
+                            <li>Relieves gas</li>
+                        </ul>
+                        <div class="quantity-selector">
+                            <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99">
+                            <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart(this)">Shop</button>
+                    </div>
+                </div>
+
+                <!-- Semiglutide Treatment -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <video src="../../Pictures/FBH/weight loss red.mov" preload="metadata" muted onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime=0;">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="product-info">
+                        <h3>Semiglutide Weight Loss Treatment</h3>
+                        <p class="product-description">Advanced weight loss treatment using Semiglutide-based solutions. Clinically proven to support healthy weight management when combined with lifestyle changes.</p>
+                        <ul class="product-features">
+                            <li>Clinically proven formula</li>
+                            <li>Professional supervision</li>
+                            <li>Personalized treatment plan</li>
+                            <li>Safe and effective</li>
+                        </ul>
+                        <button class="btn btn-primary">Schedule Consultation</button>
+                    </div>
+                </div>
+
+                <!-- Weight Loss Success -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <video src="../../Pictures/FBH/weight loss jeans.mov" preload="metadata" muted onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime=0;">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="product-info">
+                        <h3>Weight Loss Transformation Program</h3>
+                        <p class="product-description">One-on-one consultation with health professionals to create a customized weight management plan tailored to your individual needs and goals. See real results!</p>
+                        <ul class="product-features">
+                            <li>Expert health professionals</li>
+                            <li>Customized treatment plan</li>
+                            <li>Ongoing support</li>
+                            <li>Progress tracking</li>
+                        </ul>
+                        <button class="btn btn-primary">Book Consultation</button>
+                    </div>
+                </div>
+
+                <!-- Complete Weight Management Program -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <video src="../../Pictures/FBH/weight loss black top.mov" preload="metadata" muted onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime=0;">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="product-info">
+                        <h3>Complete Weight Management Program</h3>
+                        <p class="product-description">Comprehensive program combining treatment, nutrition guidance, and lifestyle coaching for sustainable weight loss results.</p>
+                        <ul class="product-features">
+                            <li>Comprehensive approach</li>
+                            <li>Nutrition guidance</li>
+                            <li>Lifestyle coaching</li>
+                            <li>Sustainable results</li>
+                        </ul>
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Weight Loss Results -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../../Pictures/FBH/weight loss woman (1).jpg" alt="Weight Loss Success Story">
+                    </div>
+                    <div class="product-info">
+                        <h3>Proven Weight Loss Results</h3>
+                        <p class="product-description">Professional coaching to help you develop healthy habits, improve nutrition, and maintain long-term wellness goals. Join our success stories!</p>
+                        <ul class="product-features">
+                            <li>Professional coaching</li>
+                            <li>Healthy habit development</li>
+                            <li>Nutrition improvement</li>
+                            <li>Long-term support</li>
+                        </ul>
+                        <button class="btn btn-primary">Get Started</button>
+                    </div>
+                </div>
+
+                <!-- Phone Consultation -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../../Pictures/FBH/phone weight loss.jpg" alt="Phone Consultation">
+                    </div>
+                    <div class="product-info">
+                        <h3>Convenient Phone Consultation</h3>
+                        <p class="product-description">Regular check-ins and adjustments via phone or video call to ensure you stay on track with your health and weight management goals.</p>
+                        <ul class="product-features">
+                            <li>Regular check-ins</li>
+                            <li>Progress monitoring</li>
+                            <li>Treatment adjustments</li>
+                            <li>Continuous support</li>
+                        </ul>
+                        <button class="btn btn-primary">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="category-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Our Health Solutions?</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">👩‍⚕️</div>
+                    <h3>Expert Professionals</h3>
+                    <p>Work with certified health professionals and medical experts.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Personalized Approach</h3>
+                    <p>Customized treatment plans tailored to your unique needs.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔬</div>
+                    <h3>Clinically Proven</h3>
+                    <p>Evidence-based treatments with proven effectiveness.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💪</div>
+                    <h3>Comprehensive Support</h3>
+                    <p>Full support throughout your health transformation journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Fasage Beverly Hills. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Fixed Social Media Icons -->
+    <div class="social-media-fixed">
+        <a href="https://www.facebook.com/Skinflawlessusa/#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+        </a>
+        <a href="https://www.instagram.com/fasagebeverlyhills" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+        </a>
+        <a href="https://www.tiktok.com/@fasagelux" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+            </svg>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=13104616585" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="cart-close" onclick="toggleCart()" aria-label="Close Cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="btn btn-primary cart-checkout" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
